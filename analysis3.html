@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Portfolio - Analysis 3</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Steam Recommendations</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="index.html">Portfolio</a></li>
+							<li><a href="aboutme.html">About Me</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/blake-thorburn-b36847227/" class="icon brands fa-linkedin"><span class="label">Instagram</span></a></li>
+							<li><a href="https://github.com/BlakeeT" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Steam User Recommendation Analysis<br /></h1>                     
+									<p>Does receiving a game for free impact the likelihood of a positive review?
+									</p>
+								</header>
+									<br>
+									<h2>Cleaning and transformation</h2>
+								</p>
+								<p>Data collected through kaggle.</p>
+
+									<p>Upon downloading the appropriate dataset, I load my packages and CSV into R. From exploratory analysis, 54 reviewers had inaccurate datapoints which were removed.</p>
+									<a href="#" class="image fit"><img src="images/steambody1.png" alt="" /></a>
+									<p>After the dataset was verified to be clean I moved on to preparing the dataset for visualisation. Under the reviews variable(the user text input of the steam review), was a disclaimer stating whether a product was received for free:
+                                        'Product received for free'. I used this to separate paid reviews from free. From there I only grouped necessary data to improve Tableau performance. </p>
+									<a href="#" class="image fit"><img src="images/steambody2.png" alt="" /></a>
+                                    <p>Before exporting to Tableau, I filtered the data to games with atleast 10 reviews although the sample size isn't large enough in general to make any concrete assessments. This although minimal also decreases bloat in Tableau.</p>
+                                    <a href="#" class="image fit"><img src="images/steambody3.png" alt="" /></a>
+								<p>Once in tableau, I experimented with different ways to visualise the data. Considered a population graph with game title and recommendation on the Y axis, with percentage graphed on the X axis. After deciding the graph would be too cluttered in this format, I decided on two multi-set bar charts to clearly display the data.</p>
+								</p>
+								
+                                <div class='tableauPlaceholder' id='viz1665805063926' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ar&#47;AregamesreceivedforfreebetterreceivedonSteam&#47;steam_reviews_free&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='views&#47;AregamesreceivedforfreebetterreceivedonSteam&#47;steam_reviews_free?:language=en-US&amp;:embed=true' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ar&#47;AregamesreceivedforfreebetterreceivedonSteam&#47;steam_reviews_free&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1665805063926');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+								<h2>Analysis and Biases</h2>
+								<p></p>
+								<p>Every game listed received a higher positive recommendation percentage except three titles. Two of which(Euro Truck Simulator and Wallpaper Engine) had already achieved the highest rating of 100% at the time of data collection in both categories, while MONSTER HUNTER: WORLD at 77.5% for paid reviews dropped to 76% approval when received for free.</p>
+                                <p>Greatest improvement, Grand Theft Auto: V starting at 58.3% for paid reviews increased to 82% when received for free.</p>
+                                <p>As for biases, the dataset was very limited for many titles in the free category likely due to developers rarely or not offering free versions of their product. To combat this a minimum sample size of 10 was implemented.</p>
+                                <p>In the future, I'll look to update this data using SteamAPI and BeautifulSoup to obtain a more complete and current dataset.</p>
+								
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<section class="split contact">
+						<section>
+							<h3>Email</h3>
+							<p><a href="#">Blakee.thorburn@gmail.com</a></p>
+						</section>
+						<section>
+							<h3>Social</h3>
+							<ul class="icons alt">
+								<li><a href="https://www.linkedin.com/in/blake-thorburn-b36847227/" class="icon brands alt fa-linkedin"><span class="label">Instagram</span></a></li>
+								<li><a href="https://github.com/BlakeeT" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							</ul>
+						</section>
+					</section>
+				</footer>
+
+				<!-- Copyright -->
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
